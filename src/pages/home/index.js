@@ -9,7 +9,6 @@ import {
   View,
 } from 'react-native';
 import {
-  IconFavorite,
   ImageBali,
   ImageBrazil,
   ImageEngland,
@@ -45,8 +44,8 @@ const Home = ({navigation}) => {
               image={ImageBali}
               city="Bali"
               onPress={() => navigation.navigate('Detail')}
+              favorite
             />
-            <IconFavorite style={styles.icon} />
           </View>
           <ContentPopular image={ImageParis} city="Paris" />
           <ContentPopular image={ImageEngland} city="England" />
@@ -105,5 +104,4 @@ const styles = StyleSheet.create({
     color: colors.text.secondary,
     marginRight: 20,
   },
-  icon: {position: 'absolute', zIndex: 10, top: 0, right: 10},
 });
